@@ -10,6 +10,8 @@ class MyAccountPage
     flash_notice_element.when_visible.visible?
   end
 
+
+
   def logged_in?(login)
     log_approve = @browser.find_element(:id, 'loggedas')
     my_sign = log_approve.find_element(:class, 'user').text

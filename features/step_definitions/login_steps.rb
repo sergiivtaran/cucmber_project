@@ -4,21 +4,22 @@ Given(/^on Log in pageone$/) do
 end
 
 When(/^I submit valid credentials1$/) do
-  on(LoginPage).login_in(@user)
+    on(LoginPage).login_in(@user)
 end
 
 
 
 Then(/^I am logged in$/) do
+  visit (MyAccountPage)
   expect(on(MyAccountPage)).to be_logged_in(@user)
 end
 
 Given(/^I have registered new user$/) do
   visit(RegistrationPage)
   @user = on(RegistrationPage).register
-  on(MyAccountPage).logout
-end
+  end
 
 Then(/^I am logged out$/) do
+  on(MyAccountPage).logout
   expect(on(MyAccountPage)).to be_logout
 end
