@@ -1,3 +1,3 @@
 When(/^I create new project$/) do
-  pending
+  on(MyAccountPage).create_project(@user)
 end
