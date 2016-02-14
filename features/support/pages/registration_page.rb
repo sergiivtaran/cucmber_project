@@ -10,9 +10,9 @@ class RegistrationPage
   text_field :user_mail, id: 'user_mail'
   button :submit, name: 'commit'
 
-  def register
+  def register (user_name = 'SHTN_login'+ rand(999).to_s)
     login_element.when_visible
-    login = 'SHTN_login' + rand(999).to_s
+    login = user_name
     self.login = login
     # self.login = "SHTN_login1"
     # password_element.when_visible
@@ -27,6 +27,7 @@ class RegistrationPage
     # user_mail_element.when_visible
     self.user_mail = "Somemai1l#{login}@goo.com"
     submit
+    puts login
     login
   end
 end
