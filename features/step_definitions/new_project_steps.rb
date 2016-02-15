@@ -4,6 +4,6 @@ end
 
 And (/^I add my users$/) do
   # visit (SettingPage)
-  # on(SettingPage).add_users
-puts 'users created'
+  on(SettingPage).add_users
+# puts 'users created'
 end
