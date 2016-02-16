@@ -14,7 +14,7 @@ class SettingPage
     tab_members_element.when_visible.click
     icon_add_element.when_visible.click
     principal_search_element.when_visible
-    self.principal_search = 'SHTN_1'
+    self.principal_search = 'SHTN_'
     sleep 2
 
     #@browser.find_element(:id, 'principals').find_element(:type, 'checkbox').click

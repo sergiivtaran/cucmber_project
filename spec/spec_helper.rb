@@ -13,9 +13,9 @@ RSpec.configure do |config|
 
   end
 
-  config.after :all do
-    @browser.quit
-  end
+  # config.after :all do
+  #   @browser.quit
+  # end
 
 
 end

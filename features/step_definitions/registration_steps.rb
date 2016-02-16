@@ -11,7 +11,7 @@ Then(/^I have registered user$/) do
   # expect(on(@current_page)).to be_registered
 end
 
-Given(/^I have registered "([^"]*)" user$/) do |arg|
-  visit(RegistrationPage)
-  @user = on(RegistrationPage).register(arg)
+Given(/^I have registered "([^"]*)" new users$/) do |arg|
+  arg.to_i.times do visit(RegistrationPage)
+  @user = on(RegistrationPage).register end
 end
